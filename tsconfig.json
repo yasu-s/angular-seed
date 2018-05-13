@@ -25,6 +25,9 @@
     ],
     "types": [
       "node"
+    ],
+    "plugins": [
+        { "name": "@angular/language-service" }
     ]
   },
   "files": [
