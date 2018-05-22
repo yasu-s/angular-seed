@@ -512,11 +512,6 @@ export class SeedConfig {
       '@angular/router/testing':
         'node_modules/@angular/router/bundles/router-testing.umd.js',
 
-        'rxjs': 'node_modules/rxjs',
-        'rxjs-compat': 'node_modules/rxjs-compat',
-        'rxjs/add/observable': 'node_modules/rxjs/internal/observable',
-        'rxjs/add/operator': 'node_modules/rxjs/internal/operators',
-
       'app/': `${this.APP_BASE}app/`,
       // For test config
       'dist/dev/': '/base/dist/dev/',

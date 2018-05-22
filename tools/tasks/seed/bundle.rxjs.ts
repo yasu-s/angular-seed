@@ -9,7 +9,7 @@ module.exports = () => {
     'runtime': false,
     'sourceMaps': true,
     'sourceMapContents': false,
-    'minify': true,
+    'minify': false,
     'mangle': false
   };
   const builder = new Builder('./');
