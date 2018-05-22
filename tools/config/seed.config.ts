@@ -427,6 +427,11 @@ export class SeedConfig {
       inject: 'shims',
       buildType: BUILD_TYPES.DEVELOPMENT
     },
+    {
+        src: '.tmp/Rx.min.js',
+        inject: 'libs',
+        buildType: BUILD_TYPES.DEVELOPMENT
+    },
   ];
 
   /**
@@ -471,12 +476,6 @@ export class SeedConfig {
    * @type {any}
    */
   SYSTEM_CONFIG_DEV: any = {
-    bundles: {
-      'node_modules/.tmp/Rx.min.js': [
-        'rxjs',
-        'rxjs/*'
-      ]
-    },
     paths: {
       [this.BOOTSTRAP_MODULE]: `${this.APP_BASE}${this.BOOTSTRAP_MODULE}`,
       '@angular/animations':
@@ -512,6 +511,11 @@ export class SeedConfig {
         'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/router/testing':
         'node_modules/@angular/router/bundles/router-testing.umd.js',
+
+        'rxjs': 'node_modules/rxjs',
+        'rxjs-compat': 'node_modules/rxjs-compat',
+        'rxjs/add/observable': 'node_modules/rxjs/internal/observable',
+        'rxjs/add/operator': 'node_modules/rxjs/internal/operators',
 
       'app/': `${this.APP_BASE}app/`,
       // For test config
@@ -606,6 +610,10 @@ export class SeedConfig {
         defaultExtension: 'js'
       },
       'rxjs': {
+        main: 'index.js',
+        defaultExtension: 'js'
+      },
+      'rxjs-compat': {
         main: 'index.js',
         defaultExtension: 'js'
       },

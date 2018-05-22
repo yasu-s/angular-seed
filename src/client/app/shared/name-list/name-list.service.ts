@@ -28,6 +28,10 @@ export class NameListService {
                       catchError(this.handleError));
   }
 
+  get2(): Observable<string[]> {
+    return this.http.get<string[]>('assets/data.json').map(d => d);
+  }
+
   /**
     * Handle HTTP error
     */
